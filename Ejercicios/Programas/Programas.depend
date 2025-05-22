@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1743445502 source:c:\users\pauli\onedrive\desktop\ejercicios\programas\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1747868103 source:c:\users\pauli\onedrive\desktop\ejercicios\programas\programa 1.1.c
+	<stdio.h>
+	<stdlib.h>
+
+1747868561 source:c:\users\pauli\onedrive\desktop\ejercicios\programas\ejercicio 1.c
+	<stdio.h>
+	<stdlib.h>
+
+1747869084 source:c:\users\pauli\onedrive\desktop\ejercicios\programas\ejercicio 2.c
+	<stdio.h>
+
