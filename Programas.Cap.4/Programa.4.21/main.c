@@ -1,8 +1,8 @@
 # include <stdio.h>
-/* Funciones y parámetros. */
-int z, y;                         /* Variables globales. */
+
+int z, y;                    
 int F1(float);
-void F2(float, int *);             /* Prototipos de funciones. */
+void F2(float, int *);     
 void main(void)
 {
     int w;
@@ -39,7 +39,7 @@ void F2(float t, int *r)
         z = (*r) * 2;
         t = (float) z  / 3;
         printf("\nIngresa el valor:");
-        scanf("%d", r);            /* El usuario debe ingresar el valor 6 */
+        scanf("%d", r);   
         printf("\nF2: %d %d %.2f %d", z, y, t, *r);
     }
     else
