@@ -1,15 +1,9 @@
 # include <stdio.h>
-
-/* Factorial.
-El programa calcula el factorial de un número entero.
-
-FAC, I, NUM: variables de tipo entero. */
-
 void main(void)
 {
     int I, NUM;
     long FAC;
-    printf("\nIngrese el número: ");
+    printf("\nIngrese el nÃºmero: ");
     scanf("%d", &NUM);
     if (NUM >= 0)
     {
