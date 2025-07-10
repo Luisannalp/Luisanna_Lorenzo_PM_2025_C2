@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-/* Nómina.
- El programa, al recibir los salarios de 15 profesores, obtiene el total de la
- nómina de la universidad.
-
- I: variable de tipo entero.
- SAL y NOM: variables de tipo real. */
  void main(void)
  {
  int I;
@@ -17,5 +11,5 @@
  scanf("%f", &SAL);
  NOM = NOM + SAL;
  }
- printf("\nEl total de la nómina es: %.2f", NOM);
+ printf("\nEl total de la nÃ³mina es: %.2f", NOM);
  }
