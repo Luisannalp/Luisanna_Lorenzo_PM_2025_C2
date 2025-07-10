@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Serie de ULAM.
-El programa, al recibir como dato un entero positivo, obtiene y escribe
-la serie de ULAM.
-
-NUM: variable de tipo entero. */
-
 void main(void)
 {
     int NUM;
-    printf("Ingresa el número para calcular la serie: ");
+    printf("Ingresa el nÃºmero para calcular la serie: ");
     scanf("%d", &NUM);
     if(NUM > 0)
     {
