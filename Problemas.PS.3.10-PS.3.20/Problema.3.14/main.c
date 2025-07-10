@@ -9,21 +9,16 @@ int main() {
     printf("Introduce el ángulo en grados: ");
     scanf("%f", &grados);
 
-    // Convertir a radianes
     radianes = grados * M_PI / 180;
 
     do {
-        // Calcular el factorial de exponente
         factorial = 1;
         for (int i = 1; i <= exponente; i++) {
             factorial *= i;
         }
-
-        // Calcular el término y sumarlo
         termino = signo * pow(radianes, exponente) / factorial;
         resultado += termino;
 
-        // Preparar siguiente término
         exponente += 2;
         signo *= -1;
         contador++;
