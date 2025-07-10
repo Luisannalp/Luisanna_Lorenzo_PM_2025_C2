@@ -1,14 +1,10 @@
 #include <stdio.h>
-/* Empresa textil.
- El programa, al recibir un arreglo tridimensional que contiene información
- ➥sobre las ventas mensuales de tres departamentos en los últimos ocho años,
- ➥genera información estadística valiosa para la empresa. */
 const int MES = 12;
 const int DEP = 3;
 const int AÑO = 8;
 void Lectura(float [][DEP][AÑO], int, int, int);
 void Funcion1(float [][DEP][AÑO], int, int, int);
-void Funcion2(float [][DEP][AÑO], int, int, int);   /* Prototipos de funciones. */
+void Funcion2(float [][DEP][AÑO], int, int, int);   
 void Funcion3(float [][DEP][AÑO], int, int, int);
 void main(void)
 {
@@ -19,8 +15,6 @@ void main(void)
  Funcion3(PRO, MES, DEP, AÑO);
 }
 void Lectura(float A[][DEP][AÑO], int F, int C, int P)
-/* La función Lectura se utiliza para leer un arreglo tridimensional de tipo
- ➥real de F filas, C columnas y P planos de profundidad. */
 {
  int K, I, J;
  for(K=0; K<P; K++)
@@ -32,8 +26,6 @@ void Lectura(float A[][DEP][AÑO], int F, int C, int P)
    }
 }
 void Funcion1(float A[][DEP][AÑO],int F, int C, int P)
-/* Esta función se utiliza para obtener las ventas totales de la empresa
- ➥en el segundo año. */
 {
  int I, J;
  float SUM = 0.0;
@@ -43,8 +35,6 @@ void Funcion1(float A[][DEP][AÑO],int F, int C, int P)
  printf("\n\nVentas totales de la empresa en el segundo año: %.2f", SUM);
 }
 void Funcion2(float A[][DEP][AÑO],int F, int C, int P)
-/* Esta función se utiliza para obtener el departamento que tuvo las mayores
- ➥ventas en el último año. Genera además el importe de las ventas. */
 {
  int I, J;
  float SUM1=0, SUM2=0, SUM3=0;
@@ -83,8 +73,6 @@ void Funcion2(float A[][DEP][AÑO],int F, int C, int P)
   }
 }
 void Funcion3(float A[][DEP][AÑO],int F, int C, int P)
-/* Esta función se utiliza para obtener el departamento, mes y año con la mayor
- ➥venta. Escribe también el monto de las ventas. */
 {
  int K, I, J, DE = -1, ME = -1, AN = -1;
  float VEN = -1.0;
