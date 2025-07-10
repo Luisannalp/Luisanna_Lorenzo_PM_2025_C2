@@ -1,13 +1,4 @@
 #include <stdio.h>
-
-/* Empresa textil.
-El programa, al recibir como datos decisivos la categoría y antigüedad de
-un empleado, determina si el mismo reúne las condiciones establecidas por
-la empresa para ocupar un nuevo cargo en una sucursal.
-
-CLA, CAT, ANT, RES: variables de tipo entero.
-SAL: variable de tipo real. */
-
 void main(void)
 {
     int CLA, CAT, ANT, RES;
@@ -34,7 +25,7 @@ void main(void)
         break;
     }
     if (RES)
-        printf("\nEl trabajador con clave %d reúne las condiciones para el puesto", CLA);
+        printf("\nEl trabajador con clave %d reÃºne las condiciones para el puesto", CLA);
     else
-        printf("\nEl trabajador con clave %d no reúne las condiciones para el puesto", CLA);
+        printf("\nEl trabajador con clave %d no reÃºne las condiciones para el puesto", CLA);
 }
