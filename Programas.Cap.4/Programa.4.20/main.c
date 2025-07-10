@@ -1,9 +1,9 @@
  # include <stdio.h>
- /* Funciones y parámetros. */
- int  F1(int , int *);              /* Prototipo de función. */
+
+ int  F1(int , int *);         
  int A = 3;
  int B = 7;
- int C = 4;                       /* Variables globales. */
+ int C = 4;             
  int D = 2;
  void main(void)
  {
