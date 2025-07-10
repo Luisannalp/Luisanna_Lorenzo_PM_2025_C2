@@ -1,21 +1,12 @@
 #include <stdio.h>
 
-/* Asistentes.
-El programa, al recibir como datos la matricula, la correra, el semestre
-y el promedio de un alumno de una universidad privada, determina si
-este puede ser asistente de su carrera.
-
-MAT, CAR y SEM: variables de tipo entero.
-PRO: variable de tipo real. */
-
-
 void main(void)
 {
     int MAT, CAR, SEM;
     float PRO;
     printf("Ingrese matricula:");
     scanf("%d", &MAT);
-    printf("Ingrese carrera (1-Industrial 2-Telem·tica 3-ComputaciÛn 4-Mec·nica) : ");
+    printf("Ingrese carrera (1-Industrial 2-Telem√°tica 3-Computaci√≥n 4-Mec√°nica) : ");
     scanf("%d", &CAR);
     printf("Ingrese semestre:");
     scanf("%d", &SEM);
