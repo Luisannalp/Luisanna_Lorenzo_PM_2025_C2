@@ -1,32 +1,26 @@
 #include <stdio.h>
 
-/* Suma matrices.
-   El programa recibe dos matrices del mismo tamaño,
-   calcula su suma y la almacena en una tercera matriz. */
-
 const int MAX = 50;
-
-/* Prototipos de funciones */
 void Lectura(int [][MAX], int, int);
 void Suma(int [][MAX], int [][MAX], int [][MAX], int, int);
 void Imprime(int [][MAX], int, int);
 
 int main(void)
 {
-    int MA[MAX][MAX], MB[MAX][MAX], MC[MAX][MAX]; /* Declaración de matrices */
+    int MA[MAX][MAX], MB[MAX][MAX], MC[MAX][MAX]; 
     int FIL, COL;
 
     do
     {
-        printf("Ingrese el número de filas de los arreglos: ");
+        printf("Ingrese el nÃºmero de filas de los arreglos: ");
         scanf("%d", &FIL);
-    } while (FIL > MAX || FIL < 1);  /* Verifica filas */
+    } while (FIL > MAX || FIL < 1);
 
     do
     {
-        printf("Ingrese el número de columnas de los arreglos: ");
+        printf("Ingrese el nÃºmero de columnas de los arreglos: ");
         scanf("%d", &COL);
-    } while (COL > MAX || COL < 1);  /* Verifica columnas */
+    } while (COL > MAX || COL < 1);
 
     printf("\nLectura del Arreglo MA\n");
     Lectura(MA, FIL, COL);
@@ -36,7 +30,7 @@ int main(void)
 
     Suma(MA, MB, MC, FIL, COL);
 
-    printf("\nImpresión del Arreglo MC\n");
+    printf("\nImpresiÃ³n del Arreglo MC\n");
     Imprime(MC, FIL, COL);
 
     return 0;
