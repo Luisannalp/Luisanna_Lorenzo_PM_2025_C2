@@ -1,8 +1,6 @@
 #include <stdio.h>
-
-/* Funciones y parámetros. */
-int a, b, c, d;                    /* Variables globales. */
-void  funcion1(int, int *, int *);    /* Prototipos de funciones. */
+int a, b, c, d;            
+void  funcion1(int, int *, int *);  
 int funcion2(int *, int);
 void main(void)
 {
@@ -39,8 +37,6 @@ int funcion2(int *d, int c)
     a = 1;
     b = 7;
     funcion1(-1, d, &b);
-    /* Observa que el parámetro dd que enviamos a ffuunncciioonn11 es por referencia.
-    Es equivalente escribir &&**dd a escribir solamente dd. */
     printf("\n%d %d %d %d", a, b, c, *d);
     c += 3;
     (*d) += 2;
