@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-/* Intercambia.
-   El programa intercambia las columnas de un arreglo bidimensional.
-   La primera con la última, la segunda con la penúltima, y así sucesivamente. */
-
 #define MAX 50
-
-/* Prototipos */
 void Lectura(float A[][MAX], int F, int C);
 void Intercambia(float A[][MAX], int F, int C);
 void Imprime(float A[][MAX], int F, int C);
@@ -17,12 +11,12 @@ int main(void)
     float MAT[MAX][MAX];
 
     do {
-        printf("Ingrese el número de filas: ");
+        printf("Ingrese el nÃºmero de filas: ");
         scanf("%d", &F);
     } while (F > MAX || F < 1);
 
     do {
-        printf("Ingrese el número de columnas: ");
+        printf("Ingrese el nÃºmero de columnas: ");
         scanf("%d", &C);
     } while (C > MAX || C < 1);
 
