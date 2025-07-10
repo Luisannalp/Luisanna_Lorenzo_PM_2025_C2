@@ -1,17 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-
-/* Función matemática
-El programa obtiene el resultado de una función.
-
-OP y T: variable de tipo entero.
-Res: variable de tipo real.*/
-
 void main(void)
 {
     int OP, T;
     float Res;
-    printf("Ingrese la opción del cálculo y el valor entero:");
+    printf("Ingrese la opciÃ³n del cÃ¡lculo y el valor entero:");
     scanf("%d %d", &OP, &T);
 
     if(OP== 1)
