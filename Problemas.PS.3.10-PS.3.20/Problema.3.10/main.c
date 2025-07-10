@@ -4,20 +4,20 @@
 
 int main()
 {
-    float L[6]; // Declaramos a L que contrendra las 6 posiciones donde se guardarn los precios.
-    int B[6]= {0}; // Para contar los boletos vendidos
-    int CLA, CAN; // CLA tipo de localidad, CAN cantidad de boletos vendidos.
-    float total = 0; // Suma total del didero recaudado.
+    float L[6]; 
+    int B[6]= {0}; 
+    int CLA, CAN; 
+    float total = 0; 
 
     printf("Ingrese los precios de las 6 localidades:\n");
-    // Leer precios
+  
     for (int i = 0; i < 6; i++)
     {
         printf("Precio de l%d:", i + 1);
         scanf("%f", &L[i]);
     }
 
-    //Leer ventas
+   
     printf("\nIngresa la localidad y cantidad de venta. Escriba (0 0) para terminar\n");
     while(1)
     {
@@ -37,7 +37,7 @@ int main()
         B[CLA - 1] += CAN;
     }
 
-//Resultado
+
     printf("Total recaudado: $%.2f\n", total);
     for (int i = 0; i < 6; i++)
     {
