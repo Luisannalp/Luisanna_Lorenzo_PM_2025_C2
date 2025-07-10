@@ -12,9 +12,9 @@ int main(void)
 
     do
     {
-        printf("Ingrese el tamaño del arreglo: ");
+        printf("Ingrese el tamaÃ±o del arreglo: ");
         scanf("%d", &TAM);
-    } while (TAM > MAX || TAM < 1);  // Verifica tamaño correcto
+    } while (TAM > MAX || TAM < 1); 
 
     Lectura(VEC, TAM);
     Ordena(VEC, TAM);
@@ -56,7 +56,6 @@ void Ordena(int A[], int T)
                 L = J;
             }
         }
-        // Intercambio de A[L] y A[I]
         temp = A[L];
         A[L] = A[I];
         A[I] = temp;
