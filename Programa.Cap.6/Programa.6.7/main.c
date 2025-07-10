@@ -1,13 +1,8 @@
 #include <stdio.h>
 
-/* Fábrica de lácteos.
-   El programa, al recibir datos de ventas mensuales por producto,
-   obtiene estadísticas útiles para la empresa. */
-
 #define PROD 15
 #define MESES 12
 
-/* Prototipos de funciones */
 void Lectura1(int ventas[PROD][MESES]);
 void Lectura2(float costos[], int n);
 void Funcion1(int ventas[][MESES], int f, int c, float costos[], float totales[]);
@@ -16,7 +11,7 @@ void Funcion3(float totales[], int n);
 
 int main(void)
 {
-    int FAB[PROD][MESES] = {0};  // Inicialización en 0 del arreglo
+    int FAB[PROD][MESES] = {0};  
     float COS[PROD], VEN[PROD];
 
     Lectura1(FAB);
@@ -79,7 +74,7 @@ void Funcion2(float A[], int C)
     for (int I = 0; I < C; I++)
         SUM += A[I];
 
-    printf("\nTotal de ventas de la fábrica: %.2f\n", SUM);
+    printf("\nTotal de ventas de la fÃ¡brica: %.2f\n", SUM);
 }
 
 void Funcion3(float A[], int C)
@@ -96,5 +91,5 @@ void Funcion3(float A[], int C)
         }
     }
 
-    printf("\nProducto más vendido: %d\tVentas: %.2f\n", TPR + 1, VEN);
+    printf("\nProducto mÃ¡s vendido: %d\tVentas: %.2f\n", TPR + 1, VEN);
 }
