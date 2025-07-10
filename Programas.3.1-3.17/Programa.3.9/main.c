@@ -1,10 +1,4 @@
 #include <stdio.h>
-
-/* Serie.
-El programa imprime los términos y obtiene la suma de una determinada serie.
-
-I, SSE y CAM: variable de tipo entero. */
-
 void main(void)
 {
     int I = 2, CAM = 1;
