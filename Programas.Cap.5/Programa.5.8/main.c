@@ -28,11 +28,9 @@ void main(void)
 }
 
 void Primo(int A, int *B)
-// Esta función determina si A es primo, en cuyo caso el valor de *B se mantiene en 1.
-// Si no es primo, *B se pone en 0.
 {
     int DI = 3;
-    while (*B && (DI <= A / 2))  // Se puede optimizar a sqrt(A), pero se mantiene así.
+    while (*B && (DI <= A / 2))
     {
         if ((A % DI) == 0)
             *B = 0;
@@ -41,7 +39,6 @@ void Primo(int A, int *B)
 }
 
 void Imprime(int Primos[], int T)
-// Esta función imprime el arreglo unidimensional de números primos.
 {
     int I;
     for (I = 0; I < T; I++)
