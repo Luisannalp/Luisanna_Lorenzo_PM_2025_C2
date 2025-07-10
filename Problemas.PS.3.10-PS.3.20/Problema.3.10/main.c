@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int main()
+void main()
 {
     float L[6]; 
     int B[6]= {0}; 
