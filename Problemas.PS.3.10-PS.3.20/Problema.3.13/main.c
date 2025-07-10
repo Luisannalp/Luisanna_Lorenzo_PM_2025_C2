@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// Función para saber si un número es primo
 int esPrimo(int num) {
     if (num < 2) return 0;
     for (int i = 2; i * i <= num; i++) {
@@ -12,14 +11,11 @@ int esPrimo(int num) {
 
 int main() {
     int N1, N2, temp;
-
-    // Leer los dos números
-    printf("Introduce el primer número: ");
+    printf("Introduce el primer nÃºmero: ");
     scanf("%d", &N1);
-    printf("Introduce el segundo número: ");
+    printf("Introduce el segundo nÃºmero: ");
     scanf("%d", &N2);
 
-    // Asegurarse de que N1 < N2
     if (N1 > N2) {
         temp = N1;
         N1 = N2;
