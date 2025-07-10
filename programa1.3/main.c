@@ -1,12 +1,4 @@
 #include <stdio.h>
-
-/* Promedio de sueldos.
-El programa, al recibir como datos seis sueldos de un empleado, calcula tanto el
-ingreso total como el promedio mensual.
-
-CLA: variable de tipo entero.
-SU1, SU2, SU3, SU4, SU5 SU6, ING, PRO: variables de tipo real. */
-
 void main (void)
  {
      int CLA;
