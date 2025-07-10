@@ -1,11 +1,4 @@
 #include <stdio.h>
-
-/* Incremento de precio.
-El programa, al recibir como dato el precio de un producto, incrementa al
-mismo 11% si es menor a 1500$ y 8% en caso contrario (Mayor o igual).
-
-PRE y NPR: variables de tipo real.*/
-
 void main(void)
 {
     float PRE, NPR;
