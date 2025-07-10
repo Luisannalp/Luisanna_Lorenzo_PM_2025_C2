@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+void main()
 {
     int N;
     printf("Ingrese el número de años: ");
