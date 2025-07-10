@@ -2,7 +2,6 @@
 
 #define MAX 10
 
-// Prototipos de funciones
 void Lectura(int A[][MAX], int N);
 void Calcula(int A[][MAX], float B[], int N);
 float Mod0(int A[][MAX], int K, int M);
@@ -16,7 +15,7 @@ int main(void)
     float VEC[MAX];
 
     do {
-        printf("Ingrese el tamaño de la matriz: ");
+        printf("Ingrese el tamaÃ±o de la matriz: ");
         scanf("%d", &TAM);
     } while (TAM > MAX || TAM < 1);
 
@@ -64,7 +63,7 @@ float Mod0(int A[][MAX], int K, int M)
         PRO *= A[I][K];
         SUM += A[I][K];
     }
-    if (SUM == 0) return 0; // evitar división por cero
+    if (SUM == 0) return 0; // evitar divisiÃ³n por cero
     return PRO / SUM;
 }
 
