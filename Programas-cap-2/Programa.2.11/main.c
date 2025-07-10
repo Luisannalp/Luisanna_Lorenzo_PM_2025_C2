@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-/* Billete de ferrocarril.
-El programa calcula el costo de un billete de ferrocarril teniendo en
-cuenta la distancia entre las dos cuidades y el tiempo de permanencia
-
-DIS y TIE: variables de tipo entero.
-BIl: variable de tipo real.*/
-
 void main(void)
 {
     int DIS, TIE;
