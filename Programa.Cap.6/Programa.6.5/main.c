@@ -1,16 +1,11 @@
 #include <stdio.h>
 
-/* Alumnos.
-   El programa, al recibir un arreglo bidimensional con calificaciones
-   de alumnos en cuatro materias, obtiene promedios por alumno y por examen. */
-
 #define MAX 50
 #define EXA 4
 
-/* Prototipos */
 void Lectura(float A[MAX][EXA], int N);
-void Funcion1(float A[MAX][EXA], int N);  // Promedio por alumno
-void Funcion2(float A[MAX][EXA], int N);  // Promedio por examen y mejor examen
+void Funcion1(float A[MAX][EXA], int N); 
+void Funcion2(float A[MAX][EXA], int N); 
 
 int main(void)
 {
@@ -18,9 +13,9 @@ int main(void)
     float ALU[MAX][EXA];
 
     do {
-        printf("Ingrese el número de alumnos del grupo: ");
+        printf("Ingrese el nÃºmero de alumnos del grupo: ");
         scanf("%d", &NAL);
-    } while (NAL > MAX || NAL < 1); // Validación
+    } while (NAL > MAX || NAL < 1); 
 
     Lectura(ALU, NAL);
     Funcion1(ALU, NAL);
@@ -34,7 +29,7 @@ void Lectura(float A[][EXA], int N)
     int I, J;
     for (I = 0; I < N; I++)
         for (J = 0; J < EXA; J++) {
-            printf("Ingrese la calificación %d del alumno %d: ", J + 1, I + 1);
+            printf("Ingrese la calificaciÃ³n %d del alumno %d: ", J + 1, I + 1);
             scanf("%f", &A[I][J]);
         }
 }
