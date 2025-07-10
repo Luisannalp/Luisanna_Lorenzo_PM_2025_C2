@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-/* Expresión.
-El programa escribe los valores de TT, PP y QQ que satisfacen una determinada
-expresión.*/
-int Expresion(int, int, int);             /* Prototipo de función. */
+
+int Expresion(int, int, int);   
 void main(void)
 {
     int EXP, T = 0, P = 0, Q = 0;
@@ -29,8 +27,6 @@ void main(void)
     }
 }
 int  Expresion(int T, int P, int Q)
-/* Esta función obtiene el resultado de la expresión para los valores
-de TT,,  PP y QQ. */
 {
     int RES;
     RES = 15 * pow(T,4) + 12 * pow(P,5) + 9 * pow(Q,6);
