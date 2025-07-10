@@ -2,7 +2,6 @@
 
 #define MAX 50
 
-// Prototipos
 void Cuadrado(int[][MAX], int);
 void Imprime(int[][MAX], int);
 
@@ -12,9 +11,9 @@ int main(void)
     int TAM;
 
     do {
-        printf("Ingrese el tamaño impar de la matriz: ");
+        printf("Ingrese el tamaÃ±o impar de la matriz: ");
         scanf("%d", &TAM);
-    } while ((TAM > MAX || TAM < 1) || (TAM % 2 == 0)); // Validación corregida
+    } while ((TAM > MAX || TAM < 1) || (TAM % 2 == 0)); 
 
     Cuadrado(CMA, TAM);
     Imprime(CMA, TAM);
@@ -31,10 +30,10 @@ void Cuadrado(int A[][MAX], int N)
     while (I <= NUM) {
         A[FIL][COL] = I;
         if (I % N != 0) {
-            FIL = (FIL - 1 + N) % N;  // Subir fila (con wrap around)
-            COL = (COL + 1) % N;      // Avanzar columna
+            FIL = (FIL - 1 + N) % N;  
+            COL = (COL + 1) % N;  
         } else {
-            FIL = (FIL + 1) % N;      // Bajar fila si es múltiplo de N
+            FIL = (FIL + 1) % N;   
         }
         I++;
     }
@@ -43,7 +42,7 @@ void Cuadrado(int A[][MAX], int N)
 void Imprime(int A[][MAX], int N)
 {
     int I, J;
-    printf("\nCuadrado mágico de orden %d:\n", N);
+    printf("\nCuadrado mÃ¡gico de orden %d:\n", N);
     for (I = 0; I < N; I++) {
         for (J = 0; J < N; J++) {
             printf("%5d", A[I][J]);
