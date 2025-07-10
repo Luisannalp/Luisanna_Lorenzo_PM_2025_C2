@@ -2,7 +2,6 @@
 
 #define MAX 50
 
-// Prototipos de funciones
 void Lectura(int matriz[][MAX], int filas, int columnas);
 void Traspuesta(int matriz[][MAX], int transpuesta[][MAX], int filas, int columnas);
 void Imprime(int matriz[][MAX], int filas, int columnas);
@@ -13,20 +12,20 @@ int main(void)
     int FIL, COL;
 
     do {
-        printf("Ingrese el número de filas de la matriz: ");
+        printf("Ingrese el nÃºmero de filas de la matriz: ");
         scanf("%d", &FIL);
-    } while (FIL > MAX || FIL < 1);  // Validación correcta
+    } while (FIL > MAX || FIL < 1); 
 
     do {
-        printf("Ingrese el número de columnas de la matriz: ");
+        printf("Ingrese el nÃºmero de columnas de la matriz: ");
         scanf("%d", &COL);
-    } while (COL > MAX || COL < 1);  // Validación correcta
+    } while (COL > MAX || COL < 1);  
 
     Lectura(MAT, FIL, COL);
     Traspuesta(MAT, TRA, FIL, COL);
 
     printf("\nMatriz Traspuesta:\n");
-    Imprime(TRA, COL, FIL);  // La traspuesta tiene dimensiones invertidas
+    Imprime(TRA, COL, FIL);  
 
     return 0;
 }
