@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Suma y promedio.
- El programa, al recibir como datos varias cadenas de caracteres que
- contienen reales, los suma y obtiene el promedio de los mismos. */
-int main(void)
+void main(void)
 {
     char c, cad[10];
     int i = 0;
