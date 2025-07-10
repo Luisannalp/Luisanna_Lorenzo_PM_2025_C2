@@ -1,9 +1,5 @@
 #include <stdio.h>
-/* Lluvias.
-El programa permite calcular el promedio mensual de las lluvias ca韉as en
-tres regiones importantes del pa韘. Determina tambi閚 cu醠 es la regi髇
-con mayor promedio de lluvia anual. */
-void Mayor(float, float, float);            /* Prototipo de funci髇. */
+void Mayor(float, float, float);          
 void main(void)
 {
     int I;
@@ -11,30 +7,28 @@ void main(void)
     for (I =1; I <= 12; I++)
     {
         printf("\n\nIngresa las lluvias del mes %d", I);
-        printf("\nRegiones Golfo, Pac韋ico y Caribe: ");
+        printf("\nRegiones Golfo, Pac铆fico y Caribe: ");
         scanf("%f %f %f", &GOL, &PAC, &CAR);
         AGOL += GOL;
         APAC += PAC;
         ACAR += CAR;
     }
-    printf("\n\nPromedio de lluvias Regi髇 Golfo: %6.2f2", (AGOL / 12));
-    printf("\nPromedio de lluvias Regi髇 Pac韋ico: %6.2f ", (APAC / 12));
-    printf("\nPromedio de lluvias Regi髇 Caribe: %6.2f \n", (ACAR / 12));
+    printf("\n\nPromedio de lluvias Regi贸n Golfo: %6.2f2", (AGOL / 12));
+    printf("\nPromedio de lluvias Regi贸n Pac铆fico: %6.2f ", (APAC / 12));
+    printf("\nPromedio de lluvias Regi贸n Caribe: %6.2f \n", (ACAR / 12));
     Mayor(AGOL, APAC, ACAR);
-    /* Se llama a la funci髇 MMaayyoorr. Paso de par醡etros por valor. */
 }
 void  Mayor(float  R1, float R2, float R3)
-/* Esta funci髇 obtiene la regi髇 con mayor promedio de lluvia anual. */
 {
     if (R1 > R2)
     if (R1 > R3)
-    printf("\nRegi髇 con mayor promedio: Regi髇 Golfo. Promedio: %6.2f", R1 / 12);
+    printf("\nRegi贸n con mayor promedio: Regi贸n Golfo. Promedio: %6.2f", R1 / 12);
     else
-    printf("\nRegi髇 con mayor promedio: Regi髇 Caribe. Promedio: %6.2f", R3 / 12);
+    printf("\nRegi贸n con mayor promedio: Regi贸n Caribe. Promedio: %6.2f", R3 / 12);
     else
         if (R2 > R3)
- printf("\nRegi髇 con mayor promedio: Regi髇 Pac韋ico. Promedio: %6.2f", R2 / 12);
+ printf("\nRegi贸n con mayor promedio: Regi贸n Pac铆fico. Promedio: %6.2f", R2 / 12);
  else
- printf("\nRegi髇 con mayor promedio: Regi髇 Caribe. Promedio: %6.2f", R3 / 12);
+ printf("\nRegi贸n con mayor promedio: Regi贸n Caribe. Promedio: %6.2f", R3 / 12);
  }
 
