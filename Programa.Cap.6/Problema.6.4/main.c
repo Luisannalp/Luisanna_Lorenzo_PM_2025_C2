@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-/* Simétrico.
-   El programa, al recibir como dato una matriz cuadrada,
-   determina si la misma es simétrica. */
-
 const int MAX = 100;
-
-/* Prototipos */
 void Lectura(int [][MAX], int);
 int Simetrico(int [][MAX], int);
 
@@ -16,17 +10,17 @@ int main(void)
 
     do
     {
-        printf("Ingrese el tamaño del arreglo: ");
+        printf("Ingrese el tamaÃ±o del arreglo: ");
         scanf("%d", &N);
-    } while (N > MAX || N < 1);  // Validación del tamaño
+    } while (N > MAX || N < 1); 
 
     Lectura(MAT, N);
     RES = Simetrico(MAT, N);
 
     if (RES)
-        printf("\nEl arreglo bidimensional es simétrico.\n");
+        printf("\nEl arreglo bidimensional es simÃ©trico.\n");
     else
-        printf("\nEl arreglo bidimensional no es simétrico.\n");
+        printf("\nEl arreglo bidimensional no es simÃ©trico.\n");
 
     return 0;
 }
