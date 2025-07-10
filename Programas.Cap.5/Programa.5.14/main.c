@@ -1,10 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-
-/* Estadístico.
-   El programa recibe un arreglo unidimensional de enteros que contiene calificaciones,
-   y calcula la media, la varianza, la desviación estándar y la moda. */
-
 const int MAX = 100;
 
 void Lectura(int *, int);
@@ -16,14 +11,14 @@ int Moda(int *, int);
 
 int main(void)
 {
-    int TAM, MOD, ALU[MAX], FRE[11] = {0}; // FRE para frecuencias de 0 a 10 (suponiendo calif entre 0 y 10)
+    int TAM, MOD, ALU[MAX], FRE[11] = {0}; 
     float MED, VAR, DES;
 
     do
     {
-        printf("Ingrese el tamaño del arreglo: ");
+        printf("Ingrese el tamaÃ±o del arreglo: ");
         scanf("%d", &TAM);
-    } while (TAM > MAX || TAM < 1);  // Verifica tamaño correcto
+    } while (TAM > MAX || TAM < 1); 
 
     Lectura(ALU, TAM);
     MED = Media(ALU, TAM);
@@ -34,7 +29,7 @@ int main(void)
 
     printf("\nMedia:      %.2f", MED);
     printf("\nVarianza:   %.2f", VAR);
-    printf("\nDesviación: %.2f", DES);
+    printf("\nDesviaciÃ³n: %.2f", DES);
     printf("\nModa:       %d\n", MOD);
 
     return 0;
