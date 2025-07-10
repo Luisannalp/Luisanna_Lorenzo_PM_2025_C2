@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Expresion.
-El programa, al recibir como datos tres valores enteros, establece si los
-mismo satisfacen una expresion determinada.
-
-R, T y Q: variables de tipo entero.
-RES: variable de tipo real. */
-
 void main(void)
 {
     float RES;
