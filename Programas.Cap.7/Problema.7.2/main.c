@@ -1,19 +1,18 @@
 #include <stdio.h>
 #include <ctype.h>
 
-/* Funciones para el manejo de caracteres de la biblioteca ctype.h. */
 int main(void)
 {
     char p1;
 
-    printf("\nIngrese un caracter para analizar si este es un dígito: ");
+    printf("\nIngrese un caracter para analizar si este es un dÃ­gito: ");
     p1 = getchar();
     if (isdigit(p1))
-        printf("%c es un dígito \n", p1);
+        printf("%c es un dÃ­gito \n", p1);
     else
-        printf("%c no es un dígito \n", p1);
+        printf("%c no es un dÃ­gito \n", p1);
 
-    fflush(stdin);  // Limpiar el búfer de entrada
+    fflush(stdin); 
 
     printf("\nIngrese un caracter para examinar si este es una letra: ");
     p1 = getchar();
@@ -24,14 +23,14 @@ int main(void)
 
     fflush(stdin);
 
-    printf("\nIngrese un caracter para examinar si este es una letra minúscula: ");
+    printf("\nIngrese un caracter para examinar si este es una letra minÃºscula: ");
     p1 = getchar();
     if (isalpha(p1))
     {
         if (islower(p1))
-            printf("%c es una letra minúscula \n", p1);
+            printf("%c es una letra minÃºscula \n", p1);
         else
-            printf("%c no es una letra minúscula \n", p1);
+            printf("%c no es una letra minÃºscula \n", p1);
     }
     else
     {
@@ -40,14 +39,14 @@ int main(void)
 
     fflush(stdin);
 
-    printf("\nIngrese una letra para convertirla de mayúscula a minúscula: ");
+    printf("\nIngrese una letra para convertirla de mayÃºscula a minÃºscula: ");
     p1 = getchar();
     if (isalpha(p1))
     {
         if (isupper(p1))
-            printf("%c fue convertida de mayúscula a minúscula \n", tolower(p1));
+            printf("%c fue convertida de mayÃºscula a minÃºscula \n", tolower(p1));
         else
-            printf("%c es una letra minúscula \n", p1);
+            printf("%c es una letra minÃºscula \n", p1);
     }
     else
     {
