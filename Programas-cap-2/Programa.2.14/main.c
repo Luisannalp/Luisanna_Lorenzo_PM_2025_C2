@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-/* Telefono.
-El programa, al recibir como datos la clave de la zona geografica y el
-numero de segundos de una llamada telefonica, calcula el costo de la misma.
-
-Y: variable de tipo entero.
-X: variable de tipo real*/
-
 void main(void)
 {
     int CLA, TIE;
