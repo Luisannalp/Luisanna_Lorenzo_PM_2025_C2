@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Cálculo de P.
-El programa obtiene el valor de P aplicando una serie determinada.
-
-I, B, C: variables de tipo entero.
-RES: variable de tipo real de doble precisión. */
 void main(void)
 {
     int I = 1, B = 0, C;
@@ -27,5 +22,5 @@ void main(void)
         }
         C++;
     }
-    printf("\nNúmero de términos:%d", C);
+    printf("\nNÃºmero de tÃ©rminos:%d", C);
 }
