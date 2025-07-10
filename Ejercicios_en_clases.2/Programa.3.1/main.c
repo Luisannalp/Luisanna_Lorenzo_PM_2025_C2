@@ -22,8 +22,5 @@ int main()
     printf("\nTotal a pagar a profesores: %.2f",NOM- (NOM *0.12) );
     printf("\nTotal a pagar en impuestos: %.2f",NOM *0.12 );
 
-    /*Imprimir el sueldo a pagar a cada profesor menos el 12%
-    Total a pagar a profesore y el total a pagar de impuestos*/
-
     return 0;
 }
