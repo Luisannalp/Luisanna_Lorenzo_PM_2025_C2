@@ -3,7 +3,6 @@
 #define FONDOS 5
 #define MESES 12
 
-// Prototipos de funciones
 void LecturaM(float [][MESES], int, int);
 void LecturaV(float *, int);
 void F1(float [][MESES], int, int, float *, float *);
