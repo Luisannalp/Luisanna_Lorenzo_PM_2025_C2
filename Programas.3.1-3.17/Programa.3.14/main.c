@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-/* Elección.
-El programa obtiene el total de votos de cada candidato y el porcentaje
-correspondiente. También considera votos nulos.
-
-VOT, C1, C2, C3, C4, C5, NU, SVO: variables de tipo entero.
- PO1, PO2, PO3, PO4, PO5, PON: variables de tipo real.*/
-
 void main(void)
 {
     int VOT, C1 = 0, C2 = 0, C3 = 0, C4 = 0,  C5 = 0, NU = 0, SVO;
@@ -36,7 +29,7 @@ case5:
             NU++;
             break;
         }
-        printf("Ingrese el siguiente voto –0 para terminar: ");
+        printf("Ingrese el siguiente voto â€“0 para terminar: ");
         scanf("%d", &VOT);
     }
     SVO = C1 + C2 + C3 + C4 + C5 + NU;
