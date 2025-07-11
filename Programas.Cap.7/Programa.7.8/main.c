@@ -2,35 +2,27 @@
 #include <string.h>
 #include <ctype.h>
 
-/* Minúsculas y mayúsculas.
-   El programa recibe un arreglo unidimensional de cadenas y determina el
-   número de minúsculas y mayúsculas que hay en cada cadena. */
-
-/* Prototipo de función */
 void minymay(char *cadena);
 
 int main(void)
 {
     int i, n;
-    char FRA[20][50];  /* Arreglo de 20 cadenas, cada una de hasta 49 caracteres + '\0' */
+    char FRA[20][50];  
 
-    printf("\nIngrese el número de filas del arreglo (máximo 20): ");
+    printf("\nIngrese el nÃºmero de filas del arreglo (mÃ¡ximo 20): ");
     scanf("%d", &n);
-    if (n > 20) n = 20; // evitar overflow
-
-    getchar(); // limpiar el buffer de entrada después de scanf
+    if (n > 20) n = 20; 
+    getchar();
 
     for (i = 0; i < n; i++)
     {
-        printf("Ingrese la línea %d de texto: ", i + 1);
+        printf("Ingrese la lÃ­nea %d de texto: ", i + 1);
         fgets(FRA[i], sizeof(FRA[i]), stdin);
 
-        // eliminar salto de línea
         size_t len = strlen(FRA[i]);
         if (len > 0 && FRA[i][len - 1] == '\n')
             FRA[i][len - 1] = '\0';
     }
-
     printf("\n\n");
 
     for (i = 0; i < n; i++)
@@ -41,7 +33,6 @@ int main(void)
 
 void minymay(char *cadena)
 {
-    /* Esta función calcula el número de minúsculas y mayúsculas en la cadena */
     int i = 0, mi = 0, ma = 0;
 
     while (cadena[i] != '\0')
@@ -54,6 +45,6 @@ void minymay(char *cadena)
     }
 
     printf("\nCadena: \"%s\"", cadena);
-    printf("\nNúmero de letras minúsculas: %d", mi);
-    printf("\nNúmero de letras mayúsculas: %d\n", ma);
+    printf("\nNÃºmero de letras minÃºsculas: %d", mi);
+    printf("\nNÃºmero de letras mayÃºsculas: %d\n", ma);
 }
