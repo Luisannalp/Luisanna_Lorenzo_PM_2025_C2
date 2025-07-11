@@ -1,39 +1,34 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Hospital.
-   El programa genera informaci髇 acerca de los pacientes de un hospital.
-*/
-
 typedef struct {
-    char cal[20];  // Calle
-    int num;       // N鷐ero
-    char col[20];  // Colonia
-    char cp[6];    // C骴igo Postal (5 + 1 para '\0')
-    char ciu[20];  // Ciudad
+    char cal[20];  
+    int num;     
+    char col[20]; 
+    char cp[6];  
+    char ciu[20]; 
 } domicilio;
 
 typedef struct {
-    char nom[20];      // Nombre y apellido
+    char nom[20];    
     int edad;
     char sexo;
-    int con;           // Condici髇 (1 a 5)
-    domicilio dom;     // Direcci髇
-    char tel[11];      // Tel閒ono
+    int con;        
+    domicilio dom;  
+    char tel[11];   
 } paciente;
 
-/* Prototipos de funciones */
 void Lectura(paciente *, int);
 void F1(paciente *, int);
 void F2(paciente *, int);
 void F3(paciente *, int);
 
 int main(void) {
-    paciente HOSPITAL[100];  // Arreglo de pacientes
+    paciente HOSPITAL[100]; 
     int TAM;
 
     do {
-        printf("Ingrese el n鷐ero de pacientes: ");
+        printf("Ingrese el n煤mero de pacientes: ");
         scanf("%d", &TAM);
     } while (TAM > 100 || TAM < 1);
 
@@ -60,27 +55,27 @@ void Lectura(paciente A[], int T) {
         printf("Sexo (F-M): ");
         scanf("%c", &A[I].sexo);
 
-        printf("Condici髇 (1..5): ");
+        printf("Condici贸n (1..5): ");
         scanf("%d", &A[I].con);
         fflush(stdin);
 
         printf("Calle: ");
         gets(A[I].dom.cal);
 
-        printf("N鷐ero: ");
+        printf("N煤mero: ");
         scanf("%d", &A[I].dom.num);
         fflush(stdin);
 
         printf("Colonia: ");
         gets(A[I].dom.col);
 
-        printf("C骴igo Postal: ");
+        printf("C贸digo Postal: ");
         gets(A[I].dom.cp);
 
         printf("Ciudad: ");
         gets(A[I].dom.ciu);
 
-        printf("Tel閒ono: ");
+        printf("Tel茅fono: ");
         gets(A[I].tel);
     }
 }
@@ -124,11 +119,11 @@ void F2(paciente A[], int T) {
         }
     }
 
-    printf("\nN鷐ero pacientes en condici髇 1: %d", C1);
-    printf("\nN鷐ero pacientes en condici髇 2: %d", C2);
-    printf("\nN鷐ero pacientes en condici髇 3: %d", C3);
-    printf("\nN鷐ero pacientes en condici髇 4: %d", C4);
-    printf("\nN鷐ero pacientes en condici髇 5: %d", C5);
+    printf("\nN煤mero pacientes en condici贸n 1: %d", C1);
+    printf("\nN煤mero pacientes en condici贸n 2: %d", C2);
+    printf("\nN煤mero pacientes en condici贸n 3: %d", C3);
+    printf("\nN煤mero pacientes en condici贸n 4: %d", C4);
+    printf("\nN煤mero pacientes en condici贸n 5: %d", C5);
 }
 
 void F3(paciente A[], int T) {
@@ -136,7 +131,7 @@ void F3(paciente A[], int T) {
     printf("\nPacientes ingresados en estado de gravedad:\n");
     for (I = 0; I < T; I++) {
         if (A[I].con == 5) {
-            printf("Nombre: %s\tTel閒ono: %s\n", A[I].nom, A[I].tel);
+            printf("Nombre: %s\tTel茅fono: %s\n", A[I].nom, A[I].tel);
         }
     }
 }
