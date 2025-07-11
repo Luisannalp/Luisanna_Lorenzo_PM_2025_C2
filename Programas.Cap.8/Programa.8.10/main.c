@@ -1,42 +1,38 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Vendedores.
-   El programa maneja información sobre las ventas de artículos domésticos. */
-
 typedef struct
 {
-    char noba[10];   // Nombre del banco
-    char nucu[10];   // Número de cuenta
+    char noba[10];  
+    char nucu[10];  
 } banco;
 
 typedef union
 {
-    banco che;       // Cheque
-    banco nomi;      // Nómina
-    char venta;      // Ventanilla
+    banco che;   
+    banco nomi;    
+    char venta;  
 } fpago;
 
 typedef struct
 {
-    char cnu[20];    // Calle y número
-    char col[20];    // Colonia
-    char cp[5];      // Código postal
-    char ciu[15];    // Ciudad
+    char cnu[20];  
+    char col[20];  
+    char cp[5];    
+    char ciu[15]; 
 } domicilio;
 
 typedef struct
 {
-    int num;               // Número de vendedor
-    char nom[20];          // Nombre
-    float ven[12];         // Ventas por mes
-    domicilio domi;        // Domicilio
-    float sal;             // Salario
-    fpago pago;            // Forma de pago
-    int cla;               // Clave forma de pago (1,2,3)
+    int num;              
+    char nom[20];       
+    float ven[12];      
+    domicilio domi;   
+    float sal;        
+    fpago pago;    
+    int cla;        
 } vendedor;
 
-/* Prototipos */
 void Lectura(vendedor *, int);
 void F1(vendedor *, int);
 void F2(vendedor *, int);
@@ -50,7 +46,7 @@ int main(void)
 
     do
     {
-        printf("Ingrese el número de vendedores: ");
+        printf("Ingrese el nÃºmero de vendedores: ");
         scanf("%d", &TAM);
     }
     while (TAM > 100 || TAM < 1);
@@ -71,13 +67,13 @@ void Lectura(vendedor A[], int T)
     for (I = 0; I < T; I++)
     {
         printf("\n\tIngrese datos del vendedor %d\n", I + 1);
-        printf("Número de vendedor: ");
+        printf("NÃºmero de vendedor: ");
         scanf("%d", &A[I].num);
         fflush(stdin);
         printf("Nombre del vendedor: ");
         gets(A[I].nom);
 
-        printf("Ventas del año:\n");
+        printf("Ventas del aÃ±o:\n");
         for (J = 0; J < 12; J++)
         {
             printf("\tMes %d: ", J + 1);
@@ -86,11 +82,11 @@ void Lectura(vendedor A[], int T)
 
         printf("Domicilio del vendedor:\n");
         fflush(stdin);
-        printf("\tCalle y número: ");
+        printf("\tCalle y nÃºmero: ");
         gets(A[I].domi.cnu);
         printf("\tColonia: ");
         gets(A[I].domi.col);
-        printf("\tCódigo Postal: ");
+        printf("\tCÃ³digo Postal: ");
         gets(A[I].domi.cp);
         printf("\tCiudad: ");
         gets(A[I].domi.ciu);
@@ -98,7 +94,7 @@ void Lectura(vendedor A[], int T)
         printf("Salario del vendedor: ");
         scanf("%f", &A[I].sal);
 
-        printf("Forma de Pago (Banco-1 Nómina-2 Ventanilla-3): ");
+        printf("Forma de Pago (Banco-1 NÃ³mina-2 Ventanilla-3): ");
         scanf("%d", &A[I].cla);
         fflush(stdin);
 
@@ -107,13 +103,13 @@ void Lectura(vendedor A[], int T)
         case 1:
             printf("\tNombre del banco: ");
             gets(A[I].pago.che.noba);
-            printf("\tNúmero de cuenta: ");
+            printf("\tNÃºmero de cuenta: ");
             gets(A[I].pago.che.nucu);
             break;
         case 2:
             printf("\tNombre del banco: ");
             gets(A[I].pago.nomi.noba);
-            printf("\tNúmero de cuenta: ");
+            printf("\tNÃºmero de cuenta: ");
             gets(A[I].pago.nomi.nucu);
             break;
         case 3:
@@ -151,7 +147,7 @@ void F2(vendedor A[], int T)
         if (SUM > 1500000.00)
         {
             A[I].sal = A[I].sal * 1.05;
-            printf("\nNúmero de empleado: %d\nVentas: %.2f\nNuevo salario: %.2f\n",
+            printf("\nNÃºmero de empleado: %d\nVentas: %.2f\nNuevo salario: %.2f\n",
                    A[I].num, SUM, A[I].sal);
         }
     }
@@ -168,7 +164,7 @@ void F3(vendedor A[], int T)
         for (J = 0; J < 12; J++)
             SUM += A[I].ven[J];
         if (SUM < 300000.00)
-            printf("\nNúmero de empleado: %d\nNombre: %s\nVentas: %.2f\n",
+            printf("\nNÃºmero de empleado: %d\nNombre: %s\nVentas: %.2f\n",
                    A[I].num, A[I].nom, SUM);
     }
 }
@@ -181,7 +177,7 @@ void F4(vendedor A[], int T)
     {
         if (A[I].cla == 1)
         {
-            printf("\nNúmero de vendedor: %d\nBanco: %s\nCuenta: %s\n",
+            printf("\nNÃºmero de vendedor: %d\nBanco: %s\nCuenta: %s\n",
                    A[I].num, A[I].pago.che.noba, A[I].pago.che.nucu);
         }
     }
