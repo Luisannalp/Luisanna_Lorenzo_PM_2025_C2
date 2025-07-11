@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Comercializadora farmacéutica.
-   Maneja ventas, inventario, reabastecimiento y nuevos productos.
-*/
-
 typedef struct
 {
     int clave;
@@ -13,7 +9,6 @@ typedef struct
     int existencia;
 } producto;
 
-/* Prototipos de funciones */
 void Lectura(producto *, int);
 void Ventas(producto *, int);
 void Reabastecimiento(producto *, int);
@@ -27,14 +22,14 @@ void main(void)
 
     do
     {
-        printf("Ingrese el número de productos: ");
+        printf("Ingrese el nÃºmero de productos: ");
         scanf("%d", &TAM);
     }
     while (TAM > 100 || TAM < 1);
 
     Lectura(INV, TAM);
 
-    printf("\nIngrese operación a realizar.\n\t1 – Ventas\n\t2 – Reabastecimiento\n\t3 – Nuevos Productos\n\t4 – Inventario\n\t0 - Salir: ");
+    printf("\nIngrese operaciÃ³n a realizar.\n\t1 â€“ Ventas\n\t2 â€“ Reabastecimiento\n\t3 â€“ Nuevos Productos\n\t4 â€“ Inventario\n\t0 - Salir: ");
     scanf("%d", &OPE);
 
     while (OPE)
@@ -54,10 +49,10 @@ void main(void)
             Inventario(INV, TAM);
             break;
         default:
-            printf("Opción inválida.\n");
+            printf("OpciÃ³n invÃ¡lida.\n");
         }
 
-        printf("\nIngrese operación a realizar.\n\t1 – Ventas\n\t2 – Reabastecimiento\n\t3 – Nuevos Productos\n\t4 – Inventario\n\t0 - Salir: ");
+        printf("\nIngrese operaciÃ³n a realizar.\n\t1 â€“ Ventas\n\t2 â€“ Reabastecimiento\n\t3 â€“ Nuevos Productos\n\t4 â€“ Inventario\n\t0 - Salir: ");
         scanf("%d", &OPE);
     }
 }
@@ -67,7 +62,7 @@ void Lectura(producto A[], int T)
     int I;
     for (I = 0; I < T; I++)
     {
-        printf("\nIngrese información del producto %d", I + 1);
+        printf("\nIngrese informaciÃ³n del producto %d", I + 1);
         printf("\n\tClave: ");
         scanf("%d", &A[I].clave);
         fflush(stdin);
@@ -111,7 +106,7 @@ void Ventas(producto A[], int T)
             else
             {
                 printf("\nNo existe en inventario la cantidad solicitada. Solo hay %d", A[I].existencia);
-                printf(" \n¿Los lleva? 1 - Sí   0 - No: ");
+                printf(" \nÂ¿Los lleva? 1 - SÃ­   0 - No: ");
                 scanf("%d", &RES);
                 if (RES)
                 {
