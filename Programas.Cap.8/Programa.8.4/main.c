@@ -1,17 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Escuela.
-El programa genera información estadística de los alumnos de una escuela.
-*/
-
 typedef struct {
     int matricula;
     char nombre[30];
-    float cal[5];  // Arreglo de 5 calificaciones
+    float cal[5]; 
 } alumno;
 
-/* Prototipos de funciones */
 void Lectura(alumno A[], int T);
 void F1(alumno A[], int T);
 void F2(alumno A[], int T);
@@ -19,11 +14,11 @@ void F3(alumno A[], int T);
 
 void main(void)
 {
-    alumno ARRE[50]; // Arreglo de hasta 50 alumnos
+    alumno ARRE[50]; 
     int TAM;
 
     do {
-        printf("Ingrese el tamaño del arreglo: ");
+        printf("Ingrese el tamaÃ±o del arreglo: ");
         scanf("%d", &TAM);
     } while (TAM > 50 || TAM < 1);
 
@@ -34,30 +29,28 @@ void main(void)
 }
 
 void Lectura(alumno A[], int T)
-/* Función para leer los datos de T alumnos */
 {
     int I, J;
     for (I = 0; I < T; I++) {
         printf("\nIngrese los datos del alumno %d", I + 1);
-        printf("\nIngrese la matrícula del alumno: ");
+        printf("\nIngrese la matrÃ­cula del alumno: ");
         scanf("%d", &A[I].matricula);
         fflush(stdin);
         printf("Ingrese el nombre del alumno: ");
         gets(A[I].nombre);
         for (J = 0; J < 5; J++) {
-            printf("\tIngrese la calificación %d del alumno %d: ", J + 1, I + 1);
+            printf("\tIngrese la calificaciÃ³n %d del alumno %d: ", J + 1, I + 1);
             scanf("%f", &A[I].cal[J]);
         }
     }
 }
 
 void F1(alumno A[], int T)
-/* Función para mostrar matrícula y promedio de cada alumno */
 {
     int I, J;
     float SUM, PRO;
     for (I = 0; I < T; I++) {
-        printf("\nMatrícula del alumno: %d", A[I].matricula);
+        printf("\nMatrÃ­cula del alumno: %d", A[I].matricula);
         SUM = 0.0;
         for (J = 0; J < 5; J++)
             SUM += A[I].cal[J];
@@ -67,17 +60,15 @@ void F1(alumno A[], int T)
 }
 
 void F2(alumno A[], int T)
-/* Muestra matrícula de alumnos con calificación mayor a 9 en la materia 3 */
 {
     int I;
-    printf("\n\nAlumnos con calificación en la tercera materia > 9");
+    printf("\n\nAlumnos con calificaciÃ³n en la tercera materia > 9");
     for (I = 0; I < T; I++)
         if (A[I].cal[2] > 9)
-            printf("\nMatrícula del alumno: %d", A[I].matricula);
+            printf("\nMatrÃ­cula del alumno: %d", A[I].matricula);
 }
 
 void F3(alumno A[], int T)
-/* Calcula el promedio general del grupo en la materia 4 */
 {
     int I;
     float PRO, SUM = 0.0;
