@@ -1,9 +1,6 @@
 #include <stdio.h>
-/* Cuenta caracteres.
- El programa, al recibir como datos una cadena de caracteres y un caracter,
- cuenta cuántas veces se encuentra el caracter en la cadena. */
-int cuenta(char *, char); /* Prototipo de función. */
 
+int cuenta(char *, char); 
 int main(void)
 {
     char car, cad[50];
@@ -18,8 +15,6 @@ int main(void)
 }
 
 int cuenta(char *cad, char car)
-/* Esta función se utiliza para obtener el número de veces que se encuentra
-   el caracter en la cadena. */
 {
     int i = 0, r = 0;
     while (cad[i] != '\0')
