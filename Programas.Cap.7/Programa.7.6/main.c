@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+void main(void)
 {
     char cad0[50] = "Hola México";
     char cad1[50], cad2[50], cad3[50] = ", buenos días!!!";
