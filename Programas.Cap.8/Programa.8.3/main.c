@@ -2,13 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Estructuras-3.
-El programa muestra la manera en que se declara una estructura anidada, así
-como la forma de acceso a los campos de las variables o apuntadores de tipo
-estructura, tanto para lectura como para escritura. Se utiliza además una
-función que recibe como parámetro un apuntador de tipo estructura.
-*/
-
 typedef struct
 {
     char calle[20];
@@ -26,7 +19,6 @@ struct empleado
 };
 
 void Lectura(struct empleado *a)
-/* Función que permite leer los campos de un apuntador de tipo estructura empleado. */
 {
     printf("\nIngrese el nombre del empleado: ");
     gets(a->nombre);
@@ -39,12 +31,12 @@ void Lectura(struct empleado *a)
     scanf("%f", &a->sueldo);
     fflush(stdin);
 
-    printf("-- Ingrese la dirección del empleado --\n");
+    printf("-- Ingrese la direcciÃ³n del empleado --\n");
     printf("\tCalle: ");
     gets(a->direccion.calle);
-    printf("\tNúmero: ");
+    printf("\tNÃºmero: ");
     scanf("%d", &a->direccion.numero);
-    printf("\tCódigo Postal: ");
+    printf("\tCÃ³digo Postal: ");
     scanf("%d", &a->direccion.cp);
     fflush(stdin);
     printf("\tLocalidad: ");
@@ -53,7 +45,7 @@ void Lectura(struct empleado *a)
 
 void main(void)
 {
-    struct empleado e0 = {"Arturo", "Compras", 15500.75, {"San Jerónimo", 120, 3490, "Toluca"}};
+    struct empleado e0 = {"Arturo", "Compras", 15500.75, {"San JerÃ³nimo", 120, 3490, "Toluca"}};
     struct empleado *e1, *e2, e3, e4;
 
     e1 = (struct empleado *)malloc(sizeof(struct empleado));
@@ -69,12 +61,12 @@ void main(void)
     scanf("%f", &e1->sueldo);
     fflush(stdin);
 
-    printf("-- Ingrese la dirección del empleado --\n");
+    printf("-- Ingrese la direcciÃ³n del empleado --\n");
     printf("\tCalle: ");
     gets(e1->direccion.calle);
-    printf("\tNúmero: ");
+    printf("\tNÃºmero: ");
     scanf("%d", &e1->direccion.numero);
-    printf("\tCódigo Postal: ");
+    printf("\tCÃ³digo Postal: ");
     scanf("%d", &e1->direccion.cp);
     fflush(stdin);
     printf("\tLocalidad: ");
@@ -88,12 +80,12 @@ void main(void)
     printf("Ingrese el sueldo del empleado: ");
     scanf("%f", &e3.sueldo);
     fflush(stdin);
-    printf("-- Ingrese la dirección del empleado --\n");
+    printf("-- Ingrese la direcciÃ³n del empleado --\n");
     printf("\tCalle: ");
     gets(e3.direccion.calle);
-    printf("\tNúmero: ");
+    printf("\tNÃºmero: ");
     scanf("%d", &e3.direccion.numero);
-    printf("\tCódigo Postal: ");
+    printf("\tCÃ³digo Postal: ");
     scanf("%d", &e3.direccion.cp);
     fflush(stdin);
     printf("\tLocalidad: ");
