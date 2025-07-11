@@ -1,35 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Escuela.
-   El programa genera información importante de los alumnos de una escuela.
-*/
-
 typedef struct {
-    char mat[20]; // Materia
-    int pro;      // Promedio
+    char mat[20]; 
+    int pro;    
 } matpro;
 
 typedef struct {
-    int matri;         // Matrícula
-    char nom[20];      // Nombre del alumno
-    matpro cal[5];     // Arreglo de materias con promedios
+    int matri;    
+    char nom[20];   
+    matpro cal[5];  
 } alumno;
 
-/* Prototipos de funciones */
 void Lectura(alumno *, int);
 void F1(alumno *, int);
 void F2(alumno *, int);
 void F3(alumno *, int);
 
 int main(void) {
-    alumno ALU[50]; // Arreglo de alumnos
+    alumno ALU[50]; 
     int TAM;
 
     do {
-        printf("Ingrese el tamaño del arreglo: ");
+        printf("Ingrese el tamaÃ±o del arreglo: ");
         scanf("%d", &TAM);
-    } while (TAM > 50 || TAM < 1); // Validación de tamaño
+    } while (TAM > 50 || TAM < 1); 
 
     Lectura(ALU, TAM);
     F1(ALU, TAM);
@@ -44,7 +39,7 @@ void Lectura(alumno A[], int T) {
     for (I = 0; I < T; I++) {
         printf("\nIngrese los datos del alumno %d\n", I + 1);
 
-        printf("Ingrese la matrícula del alumno: ");
+        printf("Ingrese la matrÃ­cula del alumno: ");
         scanf("%d", &A[I].matri);
         fflush(stdin);
 
@@ -67,7 +62,7 @@ void F1(alumno A[], int T) {
     float SUM;
 
     for (I = 0; I < T; I++) {
-        printf("\nMatrícula del alumno: %d", A[I].matri);
+        printf("\nMatrÃ­cula del alumno: %d", A[I].matri);
         SUM = 0.0;
 
         for (J = 0; J < 5; J++) {
@@ -81,11 +76,11 @@ void F1(alumno A[], int T) {
 
 void F2(alumno A[], int T) {
     int I;
-    printf("\n\nAlumnos con calificación mayor a 9 en la tercera materia:\n");
+    printf("\n\nAlumnos con calificaciÃ³n mayor a 9 en la tercera materia:\n");
 
     for (I = 0; I < T; I++) {
         if (A[I].cal[2].pro > 9) {
-            printf("Matrícula del alumno: %d\n", A[I].matri);
+            printf("MatrÃ­cula del alumno: %d\n", A[I].matri);
         }
     }
 }
