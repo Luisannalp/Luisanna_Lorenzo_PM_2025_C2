@@ -1,30 +1,24 @@
 #include <stdio.h>
 #include <string.h>
 
-/* Bienes raíces.
-   El programa maneja información sobre las propiedades que tiene una empresa
-   de bienes raíces de Lima, Perú, tanto para venta como para renta.
-*/
-
 typedef struct
 {
     char zona[20];
     char calle[20];
-    char colo[20];  // Colonia
+    char colo[20]; 
 } ubicacion;
 
 typedef struct
 {
-    char clave[6];     // Clave (5 + 1 para '\0')
-    float scu;         // Superficie cubierta
-    float ste;         // Superficie terreno
-    char car[50];      // Características
-    ubicacion ubi;     // Ubicación
+    char clave[6];   
+    float scu;       
+    float ste;       
+    char car[50];    
+    ubicacion ubi;   
     float precio;
-    char dispo;        // Disponibilidad (V = Venta, R = Renta)
+    char dispo;      
 } propiedades;
 
-/* Prototipos de funciones */
 void Lectura(propiedades[], int);
 void F1(propiedades[], int);
 void F2(propiedades[], int);
@@ -36,7 +30,7 @@ int main(void)
 
     do
     {
-        printf("Ingrese el número de propiedades: ");
+        printf("Ingrese el nÃºmero de propiedades: ");
         scanf("%d", &TAM);
     }
     while (TAM > 100 || TAM < 1);
@@ -65,7 +59,7 @@ void Lectura(propiedades A[], int T)
         scanf("%f", &A[I].ste);
         fflush(stdin);
 
-        printf("Características: ");
+        printf("CaracterÃ­sticas: ");
         gets(A[I].car);
 
         printf("Zona: ");
@@ -101,7 +95,7 @@ void F1(propiedades A[], int T)
                 puts(A[I].clave);
                 printf("Superficie cubierta: %.2f\n", A[I].scu);
                 printf("Superficie terreno: %.2f\n", A[I].ste);
-                printf("Características: ");
+                printf("CaracterÃ­sticas: ");
                 puts(A[I].car);
                 printf("Calle: ");
                 puts(A[I].ubi.calle);
@@ -120,14 +114,14 @@ void F2(propiedades A[], int T)
     char zon[20];
 
     printf("\n\t\tListado de Propiedades para Renta\n");
-    printf("Ingrese zona geográfica: ");
+    printf("Ingrese zona geogrÃ¡fica: ");
     fflush(stdin);
     gets(zon);
 
-    printf("Ingrese el límite inferior del precio: ");
+    printf("Ingrese el lÃ­mite inferior del precio: ");
     scanf("%f", &li);
 
-    printf("Ingrese el límite superior del precio: ");
+    printf("Ingrese el lÃ­mite superior del precio: ");
     scanf("%f", &ls);
 
     for (I = 0; I < T; I++)
@@ -140,7 +134,7 @@ void F2(propiedades A[], int T)
                 puts(A[I].clave);
                 printf("Superficie cubierta: %.2f\n", A[I].scu);
                 printf("Superficie terreno: %.2f\n", A[I].ste);
-                printf("Características: ");
+                printf("CaracterÃ­sticas: ");
                 puts(A[I].car);
                 printf("Calle: ");
                 puts(A[I].ubi.calle);
