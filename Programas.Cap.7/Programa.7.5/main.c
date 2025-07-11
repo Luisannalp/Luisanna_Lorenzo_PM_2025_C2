@@ -38,7 +38,5 @@ void main(void)
     printf("\n%s \t %ld", cad0, l + 10);
     puts(cad1);
 
-    // Nota: La línea cad2[10] = "Guatemala"; es incorrecta y se elimina
-
     return 0;
 }
