@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+void main(void)
 {
     int i;
     double d;
@@ -11,7 +11,6 @@ int main(void)
 
     printf("\nIngrese una cadena de caracteres: ");
     fgets(cad0, sizeof(cad0), stdin);
-    // Eliminar salto de línea si existe
     size_t len = 0;
     while (cad0[len] != '\0') len++;
     if (len > 0 && cad0[len-1] == '\n') cad0[len-1] = '\0';
@@ -39,7 +38,7 @@ int main(void)
     printf("\n%s \t %ld", cad0, l + 10);
     puts(cad1);
 
-    // Nota: La línea cad2[10] = "Guatemala"; es incorrecta y se elimina
+    // Nota: La lÃ­nea cad2[10] = "Guatemala"; es incorrecta y se elimina
 
     return 0;
 }
